@@ -1,0 +1,40 @@
+$color-productItem_1:#666666;
+$color-productItem_2:#333333;
+$background-color-productItem_2:#fff;
+
+.product {
+    &Items {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+    }
+
+    &Item {
+        position: relative;
+        margin: 40px 20px;
+        padding: 30px 0;
+        display: flex;
+        align-items: flex-end;
+        color: $color-productItem_2;
+        justify-content: center;
+        text-align: center;
+        background-color: $background-color-productItem_2;
+        min-height: 400px;
+    }
+
+    &Btn {
+        display: flex;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+    }
+
+    &Name {
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &Description {
+        color: $color-productItem_1;
+        margin-bottom: 15px;
+    }
+}
