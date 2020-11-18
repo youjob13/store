@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./productItem.module.scss";
-import logo1 from "../../../assets/img/products/1.jpg";
+import logo1 from "../../../assets/img/products/5.png";
 
 const ProductItem = () => {
   return (
@@ -13,9 +13,9 @@ const ProductItem = () => {
         </div>
         <p>$760.00</p>
       </div>
-      <div className={styles.productBtn}>
+      <div className={styles.productButtons}>
         <div className={styles.productFavorite}>Like</div>
-        <div className={styles.productFavorite}>Cart</div>
+        <div className={styles.productCart}>Cart</div>
       </div>
     </div>
   );
