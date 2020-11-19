@@ -1,0 +1,105 @@
+$color-product_1:#fff;
+$color-product_2:#e4e4e4;
+$color-product_3:#666666;
+$color-product_4:#0089cf;
+$color-product_5:#f5f5f5;
+%tilte-type_1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+%tilte-type_2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.product {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    background-color: $color-product_1;
+    min-height: 500px;
+    align-items: center;
+    &Img {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        img {
+            width: 70%;
+        }
+    }
+    &Info {
+        display: grid;
+        grid-template-rows: 1fr 7fr 4fr;
+        align-items: center;
+    }
+    &Brand {
+        @extend %tilte-type_1;
+    }
+    &Title {
+        margin: 15px 0;
+        @extend %tilte-type_2;
+    }
+    &Price {
+        color: $color-product_3;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    &Color {
+        font-weight: 700;
+        text-transform: uppercase;
+        span {
+            color:$color-product_3;
+        }
+        p {
+            color:$color-product_4;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+    }
+    &OtherItems {
+        display: flex;
+    }
+
+    &OtherItem {
+        padding: 25px 10px;
+        margin-right: 10px;
+        background-color: $color-product_5;
+        border:2px solid $color-product_2;
+        img {
+            width: 100px;
+        }
+    }
+}
+.favorite {
+    border: 2px solid $color-product_2;
+    width: 40px;
+    position: relative;
+    height: 40px;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 20px;
+        left: 42%;
+        transform: translateX(-50%);
+        background-color:$color-product_2;
+        top: 22%;
+        transform: rotateZ(45deg);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 20px;
+        left: 27%;
+        top: 22%;
+        transform: translateX(-30%);
+        background-color:$color-product_2;
+        transform: rotateZ(-45deg);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+}

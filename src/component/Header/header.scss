@@ -1,8 +1,11 @@
+$color-header_1:#333333;
+$color-header_2:#fff;
 .header {
     display: grid;
     grid-template-columns: 0.5fr 8fr 3fr;
     align-items: center;
-    margin-bottom: 60px;
+    background-color:$color-header_2;
+    padding: 20px 20px 60px;
 }
 .nav {
     &-list {
@@ -13,7 +16,7 @@
     &-item {
         margin: 0 15px;
         a {
-            color:#333333;
+            color:$color-header_1;
         }
     }
 }
