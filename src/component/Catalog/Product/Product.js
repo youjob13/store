@@ -28,7 +28,7 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div className="size">
+        <div className={styles.productSize}>
           <p>Size charts</p>
           <select>
             <option value="SIZE">SIZE</option>
