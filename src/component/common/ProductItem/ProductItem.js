@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./productItem.module.scss";
-import logo1 from "../../../assets/img/products/5.png";
+import logo1 from "../../../assets/img/products/5mini.png";
 
 const ProductItem = () => {
   return (
