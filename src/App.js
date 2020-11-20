@@ -5,6 +5,7 @@ import MainPage from "./component/MainPage/MainPage";
 import Catalog from "./component/Catalog/Catalog";
 import Product from "./component/Catalog/Product/Product";
 import Informations from "./component/Informations/Informations";
+import Footer from "./component/Footer/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Product />
       {/* <MainPage /> */}
       <Informations />
+      <Footer />
     </div>
   );
 };

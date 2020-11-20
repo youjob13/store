@@ -108,7 +108,7 @@ const Informations = () => {
             <span>$ 285.00</span>
           </div>
         </div>
-        <div className={styles.informationsPrivate}>
+        <div className={styles.informationsPrivatePolicy}>
           <input id="privateCheckbox" type="checkbox" />
           <label for="privateCheckbox" />
           <p>
