@@ -13,6 +13,9 @@ $color-header_2:#fff;
         font-size: 16px;
         font-weight: 700;
     }
+    &-select {
+        display: none;
+    }
     &-item {
         margin: 0 15px;
         a {
@@ -27,6 +30,7 @@ $color-header_2:#fff;
     &-item {
         margin: 0 15px;
         padding-left:30px;
+        width: 50px;
     }
 }
 .search,.cart,.sign-in {
@@ -34,4 +38,18 @@ $color-header_2:#fff;
     background-size:18px;
     background-repeat:no-repeat;
     background-position:left;
+}
+@media (max-width:1000px) {
+    .header {
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-select {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
 }

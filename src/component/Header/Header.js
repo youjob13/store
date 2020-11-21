@@ -11,12 +11,29 @@ const Header = () => {
 
       <nav class="navbar" role="navigation">
         <ul className="nav-list">
-          <li className="nav-item"><a href="/" >Footwear</a></li>
-          <li className="nav-item"><a href="/" >Clothing</a></li>
-          <li className="nav-item"><a href="/" >Accessories</a></li>
-          <li className="nav-item"><a href="/" >Brands</a></li>
-          <li className="nav-item"><a href="/" >Clearance</a></li>
+          <li className="nav-item">
+            <a href="/">Footwear</a>
+          </li>
+          <li className="nav-item">
+            <a href="/">Clothing</a>
+          </li>
+          <li className="nav-item">
+            <a href="/">Accessories</a>
+          </li>
+          <li className="nav-item">
+            <a href="/">Brands</a>
+          </li>
+          <li className="nav-item">
+            <a href="/">Clearance</a>
+          </li>
         </ul>
+        <select className="nav-select">
+          <option>Footwear</option>
+          <option>Clothing</option>
+          <option>Accessories</option>
+          <option>Brands</option>
+          <option>Clearance</option>
+        </select>
       </nav>
 
       <div className="menu">
@@ -30,7 +47,6 @@ const Header = () => {
           <span>Sign In</span>
         </div>
       </div>
-
     </header>
   );
 };

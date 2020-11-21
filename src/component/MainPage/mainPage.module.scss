@@ -40,12 +40,14 @@ $color-mainPage_4:#70d67b;
 .mainPageBlock {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    padding: 60px 0;
 }
 
 //brand
 .Brand {
     background-color:$color-mainPage_2;
-    margin: 40px 20px;
     padding: 50px 30px;
     min-height: 400px;
     color:$color-mainPage_1;
@@ -68,7 +70,6 @@ $color-mainPage_4:#70d67b;
 //product item with info
 .ProductItemWithInfo{
     grid-column: 1/3;
-    margin: 40px 20px;
     background-color:$color-mainPage_1;
     display: flex;
     .img {
@@ -120,7 +121,6 @@ $color-mainPage_4:#70d67b;
     overflow: hidden;
     background-color:$color-mainPage_1;
     position: relative;
-    margin: 40px 20px;
     padding: 30px 0;
     @extend %title-type_1;
     color:$color-mainPage_2;
@@ -131,7 +131,7 @@ $color-mainPage_4:#70d67b;
         position: relative;
         img {
             width: 241%;
-            z-index: 111;
+            z-index: 1;
             left: -70%;
             bottom: -470px;
             position: absolute;
@@ -140,4 +140,60 @@ $color-mainPage_4:#70d67b;
 }
 .type {
       @extend %title-type_2;
+}
+@media (max-width:1265px) {
+    .mainPageBlock {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .ProductItemWithInfo {
+        grid-row:1;
+    }
+    .productItemWithType {
+      .img {
+          img {
+            width: 211%;
+            left: -55%;
+        }
+    }
+    }
+    .Brand {
+        grid-column: 3;
+    }
+}
+@media (max-width:930px) {
+    .mainPageBlock {
+        grid-template-columns: 1fr 1fr;
+    }
+    .Brand {
+        grid-column:2;
+    }
+     .productItemWithType {
+        .img {
+            img {
+                 width: 200%;
+                 left: -49%;
+         }
+        }
+     }
+}
+@media (max-width:675px) {
+    .mainPageBlock {
+        grid-template-columns: 1fr;
+    }
+
+    .Brand {
+        grid-column: 1;
+    }
+    .ProductItemWithInfo {
+        display: none;
+    }
+    .productItemWithType {
+        .img {
+            img {
+                    transform: translate(6%, 20%);
+                    left: -50%;
+                    width: 1000px;
+            }
+        }
+    }
 }

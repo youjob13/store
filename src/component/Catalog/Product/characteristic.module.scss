@@ -19,7 +19,7 @@ $color-characteristic_6:#333333;
     text-transform: uppercase;
 }
 %select {
-    width: 120px;
+    width: 80%;
     border: 2px solid $color-characteristic_2;
     padding: 15px 50px 15px 15px;
     color: $color-characteristic_6;
@@ -32,7 +32,7 @@ $color-characteristic_6:#333333;
     }
 }
 %button {
-    width: 120px;
+    width: 100%;
     padding: 18px;
     background-color: $color-characteristic_6;
     color: $color-characteristic_5;
@@ -52,11 +52,12 @@ $color-characteristic_6:#333333;
 }
 .characteristic {
     height: 100vh;
-    background-color: $color-characteristic_1;
+    background-color: #f6f6f6;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     align-items: center;
-    padding-left:35px;
+    column-gap: 40px;
+    padding: 0 40px;
     &Story {
         position: relative;
         z-index: 1;
@@ -97,7 +98,9 @@ $color-characteristic_6:#333333;
         }
     }
     &Image {
-       img {
+        display: flex;
+        justify-content: center;
+        img {
            transform: rotateZ(-150deg);
             width: 88%;
        } 
@@ -109,7 +112,7 @@ $color-characteristic_6:#333333;
         border: 4px solid $color-characteristic_2;
         padding: 20px 30px;
         height: 50%;
-        width: 60%;
+        width: 260px;
         &Mini {
             &Image {
                 width: 100%;
@@ -157,6 +160,122 @@ $color-characteristic_6:#333333;
             @extend %title-type_2;
             margin: 15px 0;
             color:$color-characteristic_3;
+        }
+    }
+}
+@media (max-width:1200px) {
+    .characteristic {
+        &Story,
+        &Benefits {
+            h3 {
+                font-size: 15px;
+            }
+
+            h2 {
+                font-size: 17px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+        &Product {
+            &Mini {
+                line-height: 1;
+                h2 {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 15px;
+                }
+                &Color {
+                    display: block;
+                    
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .characteristic {
+        grid-template-columns:1fr 1fr;
+        &Image {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .characteristic {
+        &Story,
+        &Benefits {
+            h3 {
+                margin-bottom: 10px;
+            }
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+        &Benefits {
+            margin-top: 15px;
+        }
+        &Product {
+            width: 200px;
+            &Mini {
+                select {
+                    padding: 13px 20px;
+                }
+                button {
+                    padding: 10px 20px;
+                }
+                select,
+                button {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 665px) {
+    .characteristic {
+        padding: 50px 40px;
+        height:100%;
+        grid-template-columns: 1fr;
+        &Story,
+        &Benefits {
+            h3 {
+                margin-bottom: 20px;
+            }
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+
+        &Benefits {
+            margin-top: 40px;
+        }
+        &Product {
+            margin-top: 40px;            
+            height: 300px;
+            &Mini {
+                img {
+                    width: 60%;
+                }
+                select {
+                    padding: 13px 20px;
+                }
+
+                button {
+                    padding: 10px 20px;
+                }
+
+                select,
+                button {
+                    font-size: 10px;
+                }
+            }
         }
     }
 }

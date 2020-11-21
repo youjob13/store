@@ -1,6 +1,6 @@
 import React from "react";
 import logo1 from "../../../assets/img/products/5.png";
-import styles from "./product.module.scss";
+import styles from "./mainSectionProduct.module.scss";
 
 const Product = () => {
   return (
@@ -9,8 +9,8 @@ const Product = () => {
         <img src={logo1} />
       </div>
       <div className={styles.productInfo}>
-        <div className={styles.favorite}></div>
-        <div>
+        <div className={styles.productFavorite}></div>
+        <div className={styles.productText}>
           <h3 className={styles.productBrand}>Nike</h3>
           <h2 className={styles.productTitle}>Air Max Tavas SD</h2>
           <p className={styles.productPrice}>$ 160.00</p>

@@ -2,11 +2,9 @@ $text-color-catalog_1:#0089cf;
 $text-color-catalog_2:#c8ced0;
 $text-color-catalog_3:#666666;
 .searchInput {
-    display:flex;
-    justify-content:center;
     input {
         margin-top: 60px;
-        width: 97%;
+        width: 100%;
         font-size: 70px;
         background: transparent;
         border: none;
@@ -26,7 +24,8 @@ $text-color-catalog_3:#666666;
         color: $text-color-catalog_3;
         font-weight: 700;
         text-transform: uppercase;
-        padding:0 20px;
+        padding:50px 0 30px;
         font-size: 25px;
     }
 }
+

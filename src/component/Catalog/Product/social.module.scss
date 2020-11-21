@@ -6,7 +6,6 @@ $color-social_3:#333333;
     align-items: center;
     height: 100vh;
     background-color:$color-social_1;
-    padding: 0 40px;
     justify-content: center;
     &Title {
         h3 {
@@ -24,16 +23,29 @@ $color-social_3:#333333;
     &Img {
         text-align: center;
         display: grid;
-        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         transition: .2s;
-        &Item {
-            margin-right: 25px;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-        &:hover img {
+        column-gap: 40px;
+        img:hover {
             opacity: 0.8;
+        }
+    }
+}
+@media (max-width:1350px){
+    .social {
+        padding: 50px 0;
+        &Img {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 40px;
+        }
+    }
+}
+@media (max-width:768px) {
+    .social {
+        height:100%;
+        padding: 50px 0;
+        &Img {
+            grid-template-columns: 1fr;
         }
     }
 }
